@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "name": "Owners",
+      "role": "Full Control"
+    },
+    {
+      "name": "Members",
+      "role": "Edit"
+    },
+    {
+      "name": "Visitors",
+      "role": "Read"
+    }
+  ]
+}
