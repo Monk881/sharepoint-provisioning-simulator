@@ -40,7 +40,33 @@ It demonstrates:
 ## Project Structure
 
 
+---
 
+## How It Works
+
+1. A site provisioning request is defined using JSON input
+2. PowerShell scripts process the request
+3. Templates are applied to simulate:
+   - Site structure
+   - Permissions
+   - Metadata
+4. Output is generated in a structured format
+5. Logs and reports are created for auditing
+
+---
+
+## Technologies Used
+
+- PowerShell
+- SharePoint Online (simulated)
+- JSON
+- Microsoft 365 concepts
+
+---
+
+## Use Cases
+
+- Enterprise
 
 
 
