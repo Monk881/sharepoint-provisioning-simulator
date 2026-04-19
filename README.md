@@ -1,81 +1,97 @@
-# 🚀 SharePoint Provisioning Simulator
+# M365 SharePoint Provisioning & QA Automation Framework
 
-Automated SharePoint site provisioning system built with PowerShell and JSON templates to simulate enterprise SharePoint workflows, including permissions, metadata, and structured logging.
+This project simulates enterprise SharePoint Online provisioning workflows with built-in QA validation using PowerShell and JSON templates.
 
----
-
-## Project Demo
-
-### Provisioning Execution
-![Execution](docs/images/execution.png)
-
-### Generated Output
-![Output](docs/images/output.png)
+It is designed to model how organizations automate, test, and validate SharePoint environments at scale.
 
 ---
 
 ## Overview
 
-This project simulates how enterprise organizations automate SharePoint site provisioning processes.
+This framework automates:
 
-It demonstrates:
-- Automated site provisioning workflows
-- Role-based permission configuration
-- Metadata and policy management
-- Structured output and logging
+- SharePoint site provisioning
+- Document library creation
+- Permission assignment
+- Metadata configuration
 
----
-
-## Features
-
-- PowerShell-based provisioning engine  
-- JSON-driven configuration templates  
-- Automated folder and file structure generation  
-- Permissions and policy simulation  
-- Logging and reporting output  
-- Modular and reusable design  
+It also introduces a **QA validation layer** to verify deployments after provisioning.
 
 ---
 
-## Project Structure
+## QA Validation Features
 
+The project includes validation scripts that simulate real-world QA testing:
 
----
-
-## How It Works
-
-1. A site provisioning request is defined using JSON input
-2. PowerShell scripts process the request
-3. Templates are applied to simulate:
-   - Site structure
-   - Permissions
-   - Metadata
-4. Output is generated in a structured format
-5. Logs and reports are created for auditing
+- ✔ Site existence validation  
+- ✔ Document library verification  
+- ✔ User and access validation  
+- ✔ Permission group auditing  
+- ✔ Multi-scenario testing support  
 
 ---
 
 ## Technologies Used
 
-- PowerShell
-- SharePoint Online (simulated)
-- JSON
-- Microsoft 365 concepts
+- PowerShell (PnP / SPO modules)
+- SharePoint Online
+- JSON configuration templates
+- Script-based automation
 
 ---
 
-## Use Cases
+## Project Structure
+scripts/ # Provisioning automation logic
+validation/ # QA validation scripts
+tests/ # Test cases and QA scenarios
+logs/ # Execution logs
+templates/ # JSON provisioning templates
+input/ # Request input data
+output/ # Provisioning output results
+docs/ # Supporting documentation
 
-- Enterprise
+
+---
+
+## How to Run
+
+## 1. Connect to SharePoint
+
+```powershell
+Connect-SPOService -Url https://your-tenant-admin.sharepoint.com
+Connect-PnPOnline -Url https://your-site-url -UseWebLogin
+---
+## 2. Run Provisioning script
+./scripts/main.ps1
+___
+## 3. Run Validation Scripts
+./validation/validate-site.ps1 -siteUrl "https://your-site-url"
+./validation/validate-permissions.ps1 -siteUrl "https://your-site-url"
+
+---
+## 4. Sample Output
+PASS: Site exists
+PASS: Document library exists
+INFO: Users found: 12
+PASS: Permission groups validated
 
 
+---
 
+## Key Value
 
+This project demonstrates:
 
+- Automation of SharePoint provisioning workflows  
+- QA validation of cloud environments  
+- PowerShell scripting in enterprise M365 environments  
+- Real-world testing and verification practices  
 
+---
 
+## Author
 
-
+Built by Monk881 to simulate enterprise-grade SharePoint provisioning and QA validation workflows.
 
 
 
